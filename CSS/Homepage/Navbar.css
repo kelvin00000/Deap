@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+:root{
+    --background-color:#fdfefe;
+    --background-color-2: black;
+    --secondary-background-color: #000000d5;
+    --grid-color:#ecf0f1;
+    --accent-color:#7700d4;
+    --shadow-color:#aeb6bf;
+    --shadow-color-2:#5d6d7e;
+    --text-color:#99a3a4;
+    --text-color-2: white;
+    --text-color-3: black;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+nav.navbar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color:var(--background-color);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    box-shadow: 1px 1px 3px var(--shadow-color);
+    cursor: pointer;
+    z-index: 100;
+
+    button{
+        display:none;
+    }
+
+    img.logo{
+        width: 100px;
+        height: 45px;
+        margin-left: 30px;
+    }
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: auto;
+
+    button{
+        display:none;
+    }
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 40px;
+}
+.option{
+    margin-left: 60px;
+    height: 100%;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+
+    svg{
+        fill: var(--background-color-2)
+    }
+}
+.option:hover{
+    color: var(--accent-color);
+
+    .cart-counter{
+        background-color: var(--background-color);
+        border: 0.5px solid var(--accent-color);
+    }
+
+    svg{
+        fill: var(--accent-color);
+    }
+
+    .cart-tooltip{
+        display:flex;
+    }
+}
+.main{
+    display: flex;
+    align-items: center;
+    color: var(--text-color-2);
+    height: 100%;
+    margin-left: 60px;
+    padding: 0px 40px;
+    background-color:var(--accent-color);
+}
+.Checkout:hover{
+    .cart-tooltip{
+        display:flex;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color-3);
+
+    >svg{
+        fill: var(--text-color-2);
+        transition: 0.3s ease-in-out;
+    }
+
+       
+    .cart-tooltip{
+        position:absolute;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        color: var(--shadow-color-2);
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        height: 25px;
+        width:50px;
+        right: 440px;
+        top: 36px;
+        border-radius: 20px;
+        background-color: var(--background-color);
+        box-shadow: 1px 1px 3px var(--shadow-color);
+        transition: 1s ease-in-out;
+        z-index: 30;
+    }
+}
+
+.cart-counter{
+    position: absolute;
+    top: 1px;
+    right: 395px;
+    border-radius: 30px;
+    min-height: 8px;
+    min-width: 10px;
+    padding-left: 8.5px;
+    padding-right: 8.5px;
+    background-color: var(--background-color);
+    border: 0.5px solid var(--background-color-2);
+    transition: 0.3s ease-in-out;
+}
+
+
+@media (max-width: 1000px){
+    .navbar{
+        flex-direction: column;
+
+        .open-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: auto;
+            margin-left: 30px;
+            margin-top: 9px;
+            height: 45px;
+            width: 45px;
+            border-radius: 5px;
+            border:none;
+            box-shadow: 1px 1px 5px var(--shadow-color);
+            background-color: var(--background-color);
+
+            svg{
+                fill: var(--background-color-2);
+                font-weight: bold;
+            }
+        }
+
+        
+        img.logo{
+            position: absolute;
+            width: 90px;
+            height: 55px;
+            top: 9px;
+        }
+
+        .navbar-left{
+            display: none;
+            flex-direction: column;
+            row-gap: 15px;
+            background-color: var(--secondary-background-color);
+            width: 235px;
+            height: 200px;
+            margin-top: 10px;
+            padding-bottom: 5px;
+            animation: show .3s ease-in-out;
+            
+
+            .close-btn{
+                margin-right: auto;
+                margin-left: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 9px;
+                height: 200px;
+                width: 50px;
+                border-radius: 5px;
+                border: .5px solid var(--background-color-2);
+                background-color: var(--background-color);
+
+                svg{
+                    fill: var(--background-color-2);
+                }
+            }
+
+            a{
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: 17px;
+                color: var(--text-color-2);
+            }
+
+            .option, .main{
+                margin-left: 0px;
+            }
+        }
+        .navbar-right{
+            display: none;
+            flex-direction: column;
+            margin-right: 1000px;
+            margin-top: -.5px;
+            row-gap: 15px;
+            width: 235px;
+            height: 300px;
+            padding-top: 10px;
+            background-color: var(--secondary-background-color);
+            animation: show .3s ease-in-out;
+
+            a{
+                padding-top: 5px;
+                padding-bottom: 10px;
+                font-size: 17px;
+                color: var(--text-color-2);
+            }
+            svg{
+                fill: var(--background-color)
+            }
+
+            .option, .main{
+                margin-left: 0px;
+            }
+
+            .cart-counter{
+                display:none;
+            }
+        }
+    }
+
+    .nav-overlay{
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000d5;
+        z-index: 80;
+    }
+}
+
+@keyframes show{
+    from{opacity: 0}
+    to{opacity: 100}
+}
+

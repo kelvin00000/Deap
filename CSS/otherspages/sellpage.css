@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+
+:root{
+    --background-color:#fdfefe;
+    --background-color-2: black;
+    --grid-color:#ecf0f1;
+    --accent-color:#7700d4;
+    --shadow-color:#aeb6bf;
+    --shadow-color-2:#5d6d7e;
+    --text-color:#99a3a4;
+    --text-color-2: white;
+    --text-color-3: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    margin-top: 75px;
+    margin-bottom: 5px;
+
+    .head{
+        text-align: center;
+        font-weight: bold;
+        color: var(--text-color-3);
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 490px;
+    width: 550px;
+    row-gap: 2px;
+    background-color: var(--background-color);
+    border-radius: 40px;
+    box-shadow: 1px 1px 6px var(--shadow-color), -1px -1px 6px var(--shadow-color);
+    z-index: 5;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        row-gap: 5px;
+        height: 95%;
+        width: 85%;
+
+        h2{
+            text-align: left;
+            margin-left: 60px;
+            font-weight: bold;
+            color: var(--text-color-3);
+            margin-top: 5px;
+        }
+
+        .info{ 
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 15px;
+            margin-top: 50px;
+
+            .name{
+                label{
+                    margin-right: 39px;
+                }
+            }
+            .condition{
+                label{
+                    margin-right: 39px;
+                }
+            }
+            .phone{
+                label{
+                    margin-right: 15px;
+                }
+            }
+
+            .condition, .name, .phone, .contact{
+                input{
+                    height: 40px;
+                    padding-left: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: rgb(241, 241, 241);
+                }
+            }
+        }
+
+        button{
+            margin: 30px 70px 10px 70px;
+            width: 170px;
+            padding: 8px 10px;
+            border: .5px solid var(--accent-color);
+            border-radius: 30px;
+            background-color: var(--background-color);
+            transition: .19s ease-in;
+        }
+        button:hover{
+            background-color: var(--accent-color);
+            color: var(--text-color-2);
+            box-shadow: 2px 2px 7px var(--shadow-color);
+        }
+    }
+}
+
+
+.overlay{
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 59%;
+    left: 683px;
+    transform: translate(-50%, -50%);
+    height: 492px;
+    width: 550px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px); 
+    border-radius: 40px;
+    z-index: 50;
+    transition: .19s ease-in;
+
+    svg{
+        fill: var(--accent-color);
+        height: 90px;
+        width: 90px;
+    }
+
+    p{
+        font-weight: bold;
+        color: var(--text-color-3);
+    }
+}
+
+@media (max-width: 750px){
+    .container{
+        height: 450px;
+        width: 480px;
+        form{
+            margin-left: 75px;
+
+            .condition, .name, .phone, .contact{
+                label{
+                    display: none;
+                }
+            }
+
+            .condition, .name, .phone, .contact{
+                input{
+                    height: 30px;
+                    width: 210px;
+                }
+            }
+            button{
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .header{
+        head{
+            font-size: 20px;
+        }
+    }
+    .container{
+        height: 410px;
+        width: 440px;
+        form{
+            margin-left: 55px;
+        }
+    }
+}
+
+@media (max-width: 580px){
+    .header{
+        head{
+            font-size: 20px;
+        }
+    }
+    .container{
+        height: 410px;
+        width: 420px;
+        form{
+            margin-left: 55px;
+        }
+    }
+}
+
+@media (max-width: 520px){
+    .header{
+        margin-bottom: 15px;
+        .head{
+            font-size: 22px;
+        }
+    }
+
+    .container{
+        width: 410px;
+        height: 410px;
+        form{
+            margin-left: 55px;
+            h2{
+                font-size: 20px;
+            }
+
+            button{
+                width: 130px
+            }
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .header{
+        margin-bottom: 25px;
+        .head{
+            font-size: 22px;
+        }
+    }
+
+    .container{
+        width: 385px;
+        height: 360px;
+        form{
+            margin-left: 35px;
+            h2{
+                font-size: 18px;
+                margin-left: 80px;
+            }
+            .info{
+                margin-left: 15px;
+            }
+            button{
+                width: 115px;
+                margin-left: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .header{
+        margin-bottom: 25px;
+        .head{
+            font-size: 20px;
+        }
+    }
+
+    .container{
+        width: 315px;
+        height: 340px;
+        form{
+            row-gap: 1px;;
+            h2{
+                font-size: 16px;
+            }
+            .info{
+                row-gap: 10px;
+                margin: 25px 0px 5px 0px;
+                font-size: 13px;
+            }
+            button{
+                height: 30px;
+                width: 110px;
+                margin: 2px 0px 10px 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px){
+    .header{
+        margin-top: 90px;
+        margin-bottom: 25px;
+        .head{
+            font-size: 18px;
+        }
+    }
+
+    .container{
+        width: 290px;
+        height: 330px;
+        form{
+            row-gap: 1px;;
+            h2{
+                font-size: 16px;
+                margin-left: 50px;
+            }
+            .info{
+                row-gap: 10px;
+                margin: 25px 0px 5px 0px;
+                font-size: 13px;
+            }
+            .condition, .name, .phone, .contact{
+                input{
+                    width: 210px;
+                }
+            }
+            button{
+                height: 30px;
+                width: 110px;
+                margin: 2px 60px 10px 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 335px){
+    .header{
+        margin-top: 90px;
+        margin-bottom: 25px;
+        .head{
+            font-size: 18px;
+        }
+    }
+
+    .container{
+        width: 260px;
+        height: 330px;
+        form{
+            row-gap: 1px;;
+            h2{
+                font-size: 16px;
+                margin-left: 35px;
+            }
+            .info{
+                row-gap: 10px;
+                margin: 25px px 5px 0px;
+                font-size: 13px;
+            }
+            .condition, .name, .phone, .contact{
+                input{
+                    width: 190px;
+                }
+            }
+            button{
+                height: 30px;
+                width: 100px;
+                margin-left: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 300px){
+    .header{
+        margin-top: 90px;
+        margin-bottom: 25px;
+        .head{
+            font-size: 18px;
+        }
+    }
+
+    .container{
+        width: 230px;
+        height: 330px;
+        form{
+            row-gap: 1px;;
+            h2{
+                font-size: 16px;
+                margin-left: 35px;
+            }
+            .info{
+                row-gap: 10px;
+                margin-top: 15px;
+                margin-right: 30px;
+                font-size: 10px;
+
+                .condition, .name, .phone, .contact{
+                    input{
+                        width: 150px;
+                    }
+            }
+            }
+            button{
+                height: 30px;
+                width: 60px;
+                margin-left: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 270px){
+    button{
+        height: 30px;
+        width: 100px;
+        margin-left: 5px;
+    }
+}
