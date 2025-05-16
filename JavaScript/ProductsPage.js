@@ -86,19 +86,19 @@ productsGrid2.forEach((product) => {
                    <div class="option-radio">
                        <label class="radio-container">
                            64gb
-                           <input type="radio" name="choice-${product.id}" value="32gb" data-product-price="${product.price}">
+                           <input type="radio" name="choice-${product.id}" value="64gb" data-product-price="${product.price}">
                            <span class="checkmark"></span>
                          </label>
                        
                          <label class="radio-container">
                            128gb
-                           <input type="radio" name="choice-${product.id}" value="64gb" data-product-price="${product.price2}">
+                           <input type="radio" name="choice-${product.id}" value="128gb" data-product-price="${product.price2}">
                            <span class="checkmark"></span>
                          </label>
 
                           <label class="radio-container">
                            256gb
-                           <input type="radio" name="choice-${product.id}" value="64gb" data-product-price="${product.price3}">
+                           <input type="radio" name="choice-${product.id}" value="256gb" data-product-price="${product.price3}">
                            <span class="checkmark"></span>
                          </label>
                    </div>
@@ -161,7 +161,7 @@ productsGrid3.forEach((product) => {
                          </label>
 
                           <label class="radio-container">
-                           516gb
+                           512gb
                            <input type="radio" name="choice-${product.id}" value="512gb" data-product-price="${product.price3}">
                            <span class="checkmark"></span>
                          </label>
