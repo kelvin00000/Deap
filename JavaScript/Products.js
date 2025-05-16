@@ -19,7 +19,7 @@ export const productsGrid1 = [ {
     image: "../Images/product-iphone-Xr.png",
     name: "iphone Xr",
     price: 2400,
-    price2: 2750,
+    price2: 2550,
     storage: "Available in 32gb and 64gb",
     description: "Known for its colorful design and impressive battery life, the iPhone XR is powered by the A12 Bionic chip and features a stunning 6.1-inch Liquid Retina display. Its single 12MP camera captures sharp photos, while Face ID ensures secure and fast unlocking. This UK-used model is perfect for streaming, gaming, photography, and daily multitasking. Durable and stylish, the XR is great for younger users, social media lovers, or anyone upgrading from older iPhones."
 }, {
@@ -27,7 +27,7 @@ export const productsGrid1 = [ {
     image: "../Images/product-iphone-Xs-Max.png",
     name: "iphone Xs Max",
     price: 3000,
-    price2: 3600,
+    price2: 3200,
     storage: "Available in 32gb and 64gb",
     description: "The iPhone XS delivers premium performance with its A12 Bionic chip, vibrant 5.8-inch OLED display, and sleek stainless steel edges. Featuring dual 12MP cameras with smart HDR, it’s a photography powerhouse wrapped in a compact, luxurious body. Face ID works seamlessly, while battery efficiency ensures all-day performance. This UK-used unit is a top pick for professionals or users wanting a premium iPhone experience without the new-phone price."
 }];
@@ -41,7 +41,7 @@ export const productsGrid2 = [
     image: "../Images/product-iphone-11.png",
     name: "iphone 11",
     price: 3200,
-    price2: 3650,
+    price2: 3450,
     price3: 11111,
     storage: "available in 64gb, 128gb and 256gb",
     description: "The iPhone 11 balances power and fun with its A13 Bionic chip, vibrant colors, and dual-camera system. It captures brilliant photos and 4K videos with ease, while Night Mode enhances low-light shots. The 6.1-inch Liquid Retina display offers stunning visuals, and battery life easily lasts a full day. UK-used models are fully tested and cleaned, providing outstanding performance and great value."
@@ -67,7 +67,7 @@ export const productsGrid2 = [
     id: "rJvaFzTQ39",
     image: "../Images/product-iphone-12-mini.png",
     name: "iphone 12 mini",
-    price: 3400,
+    price: 3300,
     price2: 3700,
     price3: 11111,
     storage: "Available in 64gb, 128gb and 256gb",
@@ -77,7 +77,7 @@ export const productsGrid2 = [
     image: "../Images/product-iphone-12.png",
     name: "iphone 12",
     price: 4300,
-    price2: 4700, 
+    price2: 4600, 
     price3: 11111,
     storage: "Available in 64gb, 128gb and 256gb",
     description: "The iPhone 12 redefines modern design with its flat-edge frame, durable Ceramic Shield, and 6.1-inch Super Retina XDR display. Powered by the A14 Bionic chip, it offers fast, fluid performance for gaming, multitasking, and photography. UK-used units are carefully inspected for quality and reliability. The iPhone 12 delivers style, speed, and durability in one sleek package. A smart buy for everyday users who want modern features without the flagship price."
@@ -104,7 +104,7 @@ export const productsGrid2 = [
     image: "../Images/product-iphone-13.png",
     name: "iphone 13",
     price: 6300,
-    price2: 11111,
+    price2: 6400,
     price3: 9000,
     storage: "Available in 64gb, 128gb and 256gb",
     description: "With upgraded cameras, improved battery life, and the powerful A15 Bionic chip, the iPhone 13 is a smart step up from previous generations. Its 6.1-inch Super Retina XDR display is bright and crisp, while sensor-shift stabilization ensures smooth video and sharp photos. This UK-used model is fully tested for reliability and quality. Great for daily use, photography, or entertainment, it balances performance and efficiency."
@@ -122,7 +122,7 @@ export const productsGrid2 = [
     image: "../Images/product-iphone-13-pro-max.png",
     name: "iphone 13 pro max",
     price: 8400,
-    price2: 8400,
+    price2: 8900,
     price3: 11111,
     storage: "Available in 64gb, 128gb and 256gb",
     description: "The iPhone 13 Pro Max is a powerhouse for professionals and power users. With its stunning 6.7-inch ProMotion OLED display, A15 Bionic chip, and best-in-class triple camera system, it delivers top-tier performance. With longer battery life and a premium build, it's ideal for creatives, content makers, and anyone who demands the best. Thoroughly tested and ready for action, the iPhone 13 Pro Max is a top pick for flagship features at better value."
@@ -134,7 +134,7 @@ export const productsGrid3 = [{
     id: "KQ5x3ZLn7g",
     image: "../Images/product-iphone-14.png",
     name: "iphone 14",
-    price: 7500,
+    price: 8480,
     price2: 8700,
     price3: 10000,
     storage: "Available in 128gb, 256gb and 516gb",
