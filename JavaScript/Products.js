@@ -24,7 +24,7 @@ export const productsGrid1 = [ {
     description: "Known for its colorful design and impressive battery life, the iPhone XR is powered by the A12 Bionic chip and features a stunning 6.1-inch Liquid Retina display. Its single 12MP camera captures sharp photos, while Face ID ensures secure and fast unlocking. This UK-used model is perfect for streaming, gaming, photography, and daily multitasking. Durable and stylish, the XR is great for younger users, social media lovers, or anyone upgrading from older iPhones."
 }, {
     id: "zPYLmX23tV",
-    image: "../Images/product-iphone-Xs-Max.png",
+    image: "../Images/product-iphone-Xs-max.png",
     name: "iphone Xs Max",
     price: 3000,
     price2: 3200,

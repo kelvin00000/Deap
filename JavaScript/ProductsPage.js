@@ -190,7 +190,6 @@ productsGrid3.forEach((product) => {
 
 
 
-//export const marker = marker;
 ////////////////////ADD TO CART BUTTON FUNCTION///////////////
 document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
     button.addEventListener('click',() => {
@@ -221,6 +220,8 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
                         }
                     });
 
+                
+                    
                         if(price === 11111){
                             window.alert('This product is out of stock')
                         }else{
@@ -237,6 +238,7 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
                                 });
                             }
                         }
+                    
 
                  saveToStorage();
             ////////////////////////////////////////////////
@@ -312,11 +314,11 @@ toggleWindow.forEach((button) => {
   });
 
 /////CLOSE WINDOW////////
-closeWindow.forEach((closeButton) => {
-    closeButton.addEventListener('click', () => {
-        productwindow.style.visibility = 'hidden';
-        overlay.style.visibility = 'hidden';
-        console.log('i work')
+closeWindow.forEach((Button) => {
+    Button.addEventListener('click', () => {
+        productwindow.classList.toggle('product-info-window');
+        overlay.classList.toggle('overlay');
+        productwindow.style.display = 'none';
     })
 })
 

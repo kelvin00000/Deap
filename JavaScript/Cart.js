@@ -107,9 +107,6 @@ document.querySelectorAll('.js-remove-from-cart').forEach((button) => {
 
         generateCartHtml();
         saveToStorage();
-
-        console.log(cart);
-        console.log(newCart);
     })
 })
 
