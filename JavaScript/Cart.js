@@ -34,48 +34,51 @@ updateCartQuantity();
 //////GENERATING CART HTML//////
 let cartSummaryHTML = '';
 
-cart.forEach((cartItem) => {
-    const productId = cartItem.productId;
+function generateCartHtml(){
+    cart.forEach((cartItem) => {
+        const productId = cartItem.productId;
 
-    let matchingProduct;
+        let matchingProduct;
 
-    const allGrids = [...productsGrid1, ...productsGrid2, ...productsGrid3]
-    allGrids.forEach((product) => {
+        const allGrids = [...productsGrid1, ...productsGrid2, ...productsGrid3]
+        allGrids.forEach((product) => {
 
-    if(productId === product.id){
-        matchingProduct = product;
-        
-             cartSummaryHTML += `
-                <div class="cart-item js-cart-item-${matchingProduct.id}">
-                    <div class="image">
-                        <img src="${matchingProduct.image}" alt="iphone-image">
-                    </div>
-                    <div class="info">
-                        <div class="name">
-                            <h4>${matchingProduct.name}</h4>
+        if(productId === product.id){
+            matchingProduct = product;
+            
+                cartSummaryHTML += `
+                    <div class="cart-item js-cart-item-${matchingProduct.id}">
+                        <div class="image">
+                            <img src="${matchingProduct.image}" alt="iphone-image">
                         </div>
-                        
-                        <div class="specs">
-                            <div class="price">
-                                <h5>Price :</h5>
-                                <h4>${cartItem.price.toLocaleString()}</h4>
+                        <div class="info">
+                            <div class="name">
+                                <h4>${matchingProduct.name}</h4>
                             </div>
-                            <div class="storage">
-                                <h5>Storage :</h5>
-                                <h4>${cartItem.storage}</h4>
+                            
+                            <div class="specs">
+                                <div class="price">
+                                    <h5>Price :</h5>
+                                    <h4>${cartItem.price.toLocaleString()}</h4>
+                                </div>
+                                <div class="storage">
+                                    <h5>Storage :</h5>
+                                    <h4>${cartItem.storage}</h4>
+                                </div>
+                                <div class="quantity">
+                                    <h5>Quantity :</h5>
+                                    <h4>${cartItem.quantity}</h4>
+                                </div>
                             </div>
-                            <div class="quantity">
-                                <h5>Quantity :</h5>
-                                <h4>${cartItem.quantity}</h4>
-                            </div>
+                            <div class="button"><button class="remove-from-cart js-remove-from-cart" data-product-id="${matchingProduct.id}">Remove</button></div>
                         </div>
-                        <div class="button"><button class="remove-from-cart js-remove-from-cart" data-product-id="${matchingProduct.id}">Remove</button></div>
                     </div>
-                </div>
-            `;
-    }
-    }); 
-});
+                `;
+        }
+        }); 
+    });
+}
+generateCartHtml()
 const cartContainer = document.querySelector('.js-cart');
 if(cartContainer){
     cartContainer.innerHTML = cartSummaryHTML;
@@ -86,19 +89,27 @@ if(cartContainer){
 ////REMOVE FROM CART FUNCTION////
 document.querySelectorAll('.js-remove-from-cart').forEach((button) => {
     button.addEventListener('click', () => {
-        //location.reload();
+        location.reload();
         const productId = button.dataset.productId;
         const cartItemContainer = document.querySelector(`.js-cart-item-${productId}`);
         
-        
+        const newCart = [];
+
         cart.forEach((cartItem) => {
-            if(cartItem.productId === productId){
-                cart.splice(cartItem);
-                cartItemContainer.remove();
+            if(cartItem.productId !== productId){
+                newCart.push(cartItem);
             }
+
+            cartItemContainer.remove();
         });
 
+        cart = newCart;
+
+        generateCartHtml();
         saveToStorage();
+
+        console.log(cart);
+        console.log(newCart);
     })
 })
 
