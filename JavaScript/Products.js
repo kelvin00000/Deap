@@ -1,7 +1,7 @@
 export const productsGrid1 = [ {
     id: "tKzCq8RBLX",
     image: "../Images/product-iphone-X.png",
-    name: "ipnone X",
+    name: "iphone X",
     price: 2300,
     price2: 11111,
     storage: "Available in 32gb and 64gb",
